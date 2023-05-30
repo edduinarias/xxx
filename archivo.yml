@@ -1,0 +1,13 @@
+---
+- name: PRUEBA CREA ARCHIVO Y TRAE AL CONTROLLER
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: Crea archivo
+      shell: date >> /tmp/prueba_archivo.txt ; hostname >> /tmp/prueba_archivo.txt ;  echo "Hola Mundo" >> /tmp/prueba_archivo.txt
+
+    - name: Trae el Archivo al Controller
+      fetch:
+        src: /tmp/prueba_archivo.txt
+        dest:  /tmp/traido_del_cliente.txt
+        flat: yes
