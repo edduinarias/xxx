@@ -2,8 +2,8 @@
 - hosts: all
   gather_facts: false
   tasks:
-    - name: Restart Nginx
+    - name: Restart httpd
       ansible.builtin.service:
-        name: nginx
+        name: httpd
         state: restarted
       become: true
