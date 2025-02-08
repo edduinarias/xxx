@@ -1,4 +1,5 @@
----
-- name: mostrar
-  debug:
-    msg: "Hola"
+- hosts: localhost
+  connection: local
+  tasks:
+    - debug:
+        msg: "Thank you, my friend!"
