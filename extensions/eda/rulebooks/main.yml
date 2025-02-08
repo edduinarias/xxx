@@ -1,12 +1,12 @@
 - name: Hello World Rulebook
   hosts: localhost
   sources:
-    - ansible.eda.timer:
-        interval: 5
+    - ansible.eda.tick:
+        delay: 5
 
   rules:
     - name: Print Hello World
-      condition: always
+      condition: true
       action:
         debug:
           msg: "Hello World! Event-driven action executed."
