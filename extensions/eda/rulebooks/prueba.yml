@@ -9,4 +9,4 @@
       condition: true
       action:
         debug:
-          msg: "Hello World! Event-driven action executed."
+          msg: "Todo está OK."
